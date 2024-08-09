@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class House_details extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'house_name',
+        'square_meters',
+        'city',
+        'barangay',
+        'zipcode',
+    ];
+
+    public function house_details()
+    {
+        return $this->belongsTo('House');
+    }
+
 }

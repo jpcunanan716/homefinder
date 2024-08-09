@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('backyard');
             $table->string('basement');
             $table->string('attic');
+            $table->float('price');
             $table->string('description');
             $table->integer('house_id')->unsigned();
             $table->foreign('house_id')->references('id')->on('houses')->ondelete('cascade');
