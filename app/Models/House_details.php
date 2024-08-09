@@ -15,6 +15,7 @@ class House_details extends Model
         'city',
         'barangay',
         'zipcode',
+        'price',
     ];
 
     public function house_details()
