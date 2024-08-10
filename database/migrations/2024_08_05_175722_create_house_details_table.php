@@ -12,20 +12,19 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('house_details', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
             $table->string('house_name');
             $table->integer('square_meters');
-            $table->string('floors');
-            $table->string('rooms');
-            $table->string('bathrooms');
-            $table->string('backyard');
-            $table->string('basement');
-            $table->string('attic');
+            $table->integer('floors');
+            $table->integer('rooms');
+            $table->integer('bathrooms');
+            $table->boolean('backyard');
+            $table->boolean('basement');
+            $table->boolean('attic');
             $table->float('price');
+            $table->boolean('furnished');
             $table->string('description');
-            $table->integer('house_id')->unsigned();
-            $table->foreign('house_id')->references('id')->on('houses')->ondelete('cascade');
         });
     }
 

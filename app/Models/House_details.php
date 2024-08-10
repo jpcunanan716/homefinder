@@ -12,9 +12,14 @@ class House_details extends Model
     protected $fillable = [
         'house_name',
         'square_meters',
-        'city',
-        'barangay',
-        'zipcode',
+        'floors',
+        'rooms',
+        'bathrooms',
+        'backyard',
+        'basement',
+        'attic',
+        'description',
+        'furnished',
         'price',
     ];
 

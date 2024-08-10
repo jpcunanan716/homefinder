@@ -12,14 +12,9 @@ class House_address extends Model
     protected $fillable = [
         'house_number_street',
         'province',
-        'floors',
-        'rooms',
-        'bathrooms',
-        'backyard',
-        'basement',
-        'attic',
-        'description',
-
+        'city',
+        'barangay',
+        'zipcode',
     ];
 
     public function house_address()

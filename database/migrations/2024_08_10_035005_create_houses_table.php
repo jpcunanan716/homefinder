@@ -15,7 +15,11 @@ return new class extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->integer('user_id')->unsigned();
+            $table->integer('house_addresses_id')->unsigned();
+            $table->integer('house_details_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->ondelete('cascade');
+            $table->foreign('house_addresses_id')->references('id')->on('house_addresses')->ondelete('cascade');
+            $table->foreign('house_details_id')->references('id')->on('house_details')->ondelete('cascade');
         });
     }
 

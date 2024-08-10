@@ -12,15 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('house_addresses', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
             $table->string('house_number_street');
             $table->string('province');
             $table->string('city');
             $table->string('barangay');
             $table->integer('zipcode');
-            $table->integer('house_id')->unsigned();
-            $table->foreign('house_id')->references('id')->on('houses')->ondelete('cascade');
         });
     }
 
