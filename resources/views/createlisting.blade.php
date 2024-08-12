@@ -12,11 +12,31 @@
         @method('post')
         <div>
             <label>House Name</label>
-            <input type = "text" name = "house_name" placeholder = "house_name" />
+            <input type = "text" name = "houseName" placeholder = "House Name" />
+        </div>
+        <div>
+            <label>House No./Building No., Street</label>
+            <input type = "text" name = "houseNumberStreet" placeholder = "House No./Building No., Street" />
+        </div>
+        <div>
+            <label>Province</label>
+            <input type = "text" name = "province" placeholder = "Province" />
+        </div>
+        <div>
+            <label>Town/City</label>
+            <input type = "text" name = "city" placeholder = "City" />
+        </div>
+        <div>
+            <label>Barangay</label>
+            <input type = "text" name = "barangay" placeholder = "Barangay" />
+        </div>
+        <div>
+            <label>Zip Code</label>
+            <input type = "text" name = "zipCode" placeholder = "Zip Code" />
         </div>
         <div>
             <label>Square Meters</label>
-            <input type = "text" name = "square_meters" placeholder = "square_meters" />
+            <input type = "text" name = "squareMeters" placeholder = "Square Meters" />
         </div>
         <div>
             <label>Floors</label>

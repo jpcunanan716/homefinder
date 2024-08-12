@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\House_details;
+use App\Models\House;
 
 class HouseController extends Controller
 {
@@ -17,8 +17,13 @@ class HouseController extends Controller
 
     public function save(Request $request){
         $data = $request->validate([
-            'house_name' => 'required',
-            'square_meters' => 'required',
+            'houseName' => 'required',
+            'houseNumberStreet'=> 'required',
+            'province' => 'required',
+            'city' => 'required',
+            'barangay' => 'required',
+            'zipCode' => 'required',
+            'squareMeters' => 'required',
             'floors' => 'required',
             'rooms' => 'required',
             'bathrooms' => 'required',
@@ -30,7 +35,7 @@ class HouseController extends Controller
             'description' => 'required',
         ]);
 
-        $newListing = House_details::create($data);
+        $newListing = House::create($data);
 
         return redirect(route('home'));
     }

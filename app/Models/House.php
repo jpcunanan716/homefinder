@@ -9,18 +9,29 @@ class House extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'houseName',
+        'houseNumberStreet',
+        'province',
+        'city',
+        'barangay',
+        'zipCode',
+        'squareMeters',
+        'floors',
+        'rooms',
+        'bathrooms',
+        'backyard',
+        'basement',
+        'attic',
+        'description',
+        'furnished',
+        'price',
+    ];
+
     public function houses()
     {
         return $this->hasMany('App\User');
     }
 
-    public function housedetails()
-    {
-        return $this->hasOne('House_details');
-    }
-
-    public function houseaddress()
-    {
-        return $this->hasOne('House_address');
-    }
+    
 }
