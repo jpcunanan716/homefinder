@@ -36,7 +36,7 @@ class HouseController extends Controller
         ]);
 
         $newListing = House::create($data);
-
+        
         return redirect(route('home'));
     }
 }
