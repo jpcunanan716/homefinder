@@ -9,6 +9,22 @@
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
+        <!-- Address -->
+        <div class="mt-4">
+            <x-input-label for="address" :value="__('Address')" />
+            <x-text-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required autofocus autocomplete="name" />
+            <x-input-error :messages="$errors->get('address')" class="mt-2" />
+        </div>
+
+
+        <!-- Number -->
+        <div class="mt-4">
+            <x-input-label for="number" :value="__('Number')" />
+            <x-text-input id="number" class="block mt-1 w-full" type="text" name="number" :value="old('number')" required autofocus autocomplete="name" />
+            <x-input-error :messages="$errors->get('number')" class="mt-2" />
+        </div>
+
+
         <!-- Email Address -->
         <div class="mt-4">
             <x-input-label for="email" :value="__('Email')" />
@@ -50,3 +66,26 @@
         </div>
     </form>
 </x-guest-layout>
+
+<!-- int-tel-input resources-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.9.2/build/css/intlTelInput.css">
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.9.2/build/js/intlTelInput.min.js"></script>
+
+<style>
+    @media (prefers-color-scheme: dark) {
+  .iti__selected-country{
+    color: white;
+  }
+}
+</style>
+
+<script>
+const input = document.querySelector("#number");
+  window.intlTelInput(input, {
+    initialCountry: "ph",
+    strictMode: true,
+    separateDialCode: true,
+    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.9.2/build/js/utils.js",
+  });
+
+</script>
